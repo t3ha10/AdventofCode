@@ -1,0 +1,44 @@
+Day 1:
+    - Part1: 74
+    - Part2: 1795
+
+Day 2:
+    - Part1: 1606483
+    - Part2: 3842356
+    
+Day 3:
+    - Part1: 2565
+    - Part2: 2639
+    
+Day 4:
+    - Part1: 254575
+    - Part2: 1038736
+    
+Day 5:
+    - Part1: 258
+    - Part2: 53
+    
+Day 6:
+    - Part1: 377891
+    - Part2: 14110788
+
+Day 7:
+    - Part1: -
+    - Part2: -
+
+Day 8:
+    - Part1: 1350
+    - Part2: 2085
+
+Day 9:
+    - Part1: 141
+    - Part2: 736
+
+Day 10:
+    - Part1: 329356
+    - Part2: 4666278
+
+Day 11:
+    - Part1: cqjxxyzz
+    - Part2: cqkaabcc
+
