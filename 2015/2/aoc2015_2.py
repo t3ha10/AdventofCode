@@ -17,8 +17,8 @@ for line in DIMENSIONS.split():
     bow = l * w * h
     sum_ribbon += bow
  
-print(f"total paper is {sum_paper}")
-print(f"total ribbon is {sum_ribbon}")
+print(f"{sum_paper = }")
+print(f"{sum_ribbon = }")
 # total_paper = 0
 
 # Toinen tapa (lyhyempi mutta sekävämpi)
