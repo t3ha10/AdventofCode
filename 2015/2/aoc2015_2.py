@@ -1,4 +1,4 @@
-file = open(r'input_2015_2.txt', 'rt')
+file = open(r'C:\Users\tt026085\Documents\AdventofCode\2015\2\input_2015_2.txt', 'rt')
 DIMENSIONS = file.read()
 
 sum_paper = 0
