@@ -1,5 +1,13 @@
-file = open('input_2015_1.txt', 'r')
-INSTRUCTIONS = file.read()
+# file = open('input_2015_1.txt', 'r')
+# file = open(r'input_2015_1.txt', 'rt')
+
+# INSTRUCTIONS = file.read()
+# file.close()
+# with open(r"input_2015_1.txt", 'rt') as file:
+with open(r"C:\Users\tt026085\Documents\AdventofCode\2015\1\input_2015_1.txt", 'rt') as file:
+    INSTRUCTIONS = file.read() 
+    file.close()
+
 
 floor = position = 0
 basement_is_visited = False
