@@ -1,0 +1,15 @@
+Day 1:
+    - Part1: 1047
+    - Part2: 982
+
+Day 2:
+    - Part1: 41919
+    - Part2: 303
+    
+Day 3:
+    - Part1: 475
+    - Part2: 279138
+    
+Day 4:
+    - Part1: 451
+    - Part2: 223
