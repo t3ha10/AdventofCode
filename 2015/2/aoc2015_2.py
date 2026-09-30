@@ -2,7 +2,6 @@
 # DIMENSIONS = file.read()
 with open(r'C:\Users\tt026085\Documents\AdventofCode\2015\2\input_2015_2.txt', 'rt') as file:
     DIMENSIONS = file.read()
-    file.close()
 
 
 sum_paper = 0
