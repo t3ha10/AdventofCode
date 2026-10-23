@@ -1,45 +1,49 @@
 from pathlib import Path
+from typing import Generator
 
 file_path = Path(__file__).parent/ 'input_2015_5.txt'
-def is_enough_vowels(word):
-    # return len([character for character in word if character in 'aeiou']) >= 3
+
+def get_substrings(string: str, length: int = 2) -> Generator[str]:
+    return (string[index:index+length] for index in range(len(string)-(length-1)))
+
+def rule1(word):
     return sum(letter in 'aeiou' for letter in word) >= 3
-def is_contain_twice(word):
-    for i in range(len(word) - 1):
-        if word[i] == word[i + 1]:
+
+def rule2(word):
+    for pair in get_substrings(word):
+        if pair[0] == pair[1]:
             return True
     return False
 
-def is_not_contain(word):
-    sequence = ['ab', 'cd', 'pq', 'xy']
-    for case in sequence:
-        if word.find(case) != -1:
+def rule3(word):
+    for pair in get_substrings(word):
+        if pair in ('ab', 'cd', 'pq', 'xy'):
             return False
     return True
 
-def is_contain_pair(word):
-    for i in range(len(word) - 1):
-        for j in range(i + 2, len(word) - 1):
-            if j != i and j + 1 != i + 1:
-                if word[i] + word[i + 1] == word[j] + word[j + 1]:
-                    return True
-    return False
-def is_contain_repeat_letter(word):
-    for i in range(len(word) - 2):
-        if word[i] == word[i + 2]:
+def rule4(word):
+    for index, pair in enumerate(get_substrings(word)):
+        if pair in word[index+2:]:
             return True
     return False
 
+def rule5(word):
+    for substring in get_substrings(word, length=3):
+        if substring[0] == substring[-1]:
+            return True
+    return False
 
+def is_nice1(word: str) -> bool:
+    return rule1(word) and rule2(word) and rule3(word)
 
+def is_nice2(word: str) -> bool:
+    return rule4(word) and rule5(word)
 
 with open(file_path) as file:
-    total1 = 0
-    total2 = 0
-    for line in file:
-        if is_enough_vowels(line) and is_contain_twice(line) and is_not_contain(line):
-            total1 += 1
-        if is_contain_pair(line) and is_contain_repeat_letter(line):
-            total2 += 1
-    print('Part 1: ', total1)
-    print('Part 2: ', total2)
+    strings = file.read()
+total = sum(is_nice1(line) for line in strings.splitlines())
+print(f'Part 1: {total}')
+
+total = sum(is_nice2(line) for line in strings.splitlines())
+
+print(f'Part 2: {total}')
