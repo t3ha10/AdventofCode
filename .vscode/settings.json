@@ -1,0 +1,6 @@
+{
+  "editor.autoClosingBrackets": "always",
+  "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
+  "editor.tabCompletion": "on",
+  "emmet.triggerExpansionOnTab": true
+}
